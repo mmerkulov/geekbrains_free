@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	// add comment for commit;
+
+	function askForWords(words){
+		while (words.length != 0) {
+			var i = parseInt(Math.random() * words.length);
+			var userTranslate = prompt("Как переводиться слово: " + words[i][0]);
+			
+			// userTranslate = userTranslate.toLowerCase();
+
+			if (words[i][1] == userTranslate){
+				alert("Правильно!");
+				words.splice(i, 1);
+			}
+			else {
+				alert("Неверно! Правильный ответ = " + words[i][1]);
+			}
+		}
+	}
+
+	var easyWords = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["do", "делать"],
+		["apple", "яблоко"],
+		["mean", "иметь ввиду"]
+	];
+
+	askForWords(easyWords);
+
+	alert ("Мои поздравления! Вы закончили обучение на 1ом уровне!");
+
+	var hardWords = [
+		["chainsaw", "бензопила"],
+		["squirrel","белка"],
+		["squash","баклажан"],
+		["homeland","родина"],
+		["sewerage", "канализация"],
+		["bottom", "дно"]
+	];
+
+	askForWords(hardWords);
+	alert ("Мои поздравления! Вы закончили обучение на 2ом уровне!");
+
+	alert ("Всего доброго!");
+
+</script>
