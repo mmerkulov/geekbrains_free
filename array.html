@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+
+	var number = [42, 56, 96, 14, 28];
+
+	alert("Запомните числа и их порядок: " + number);
+
+	var uesrAnswer = +prompt("Каким было первое число?");
+	
+	if (uesrAnswer == number[0]){
+		alert("Все верно!");
+	}
+	else {
+		alert("Вы ошиблись! Верное значение = " + number[0]);
+	}
+
+	uesrAnswer = +prompt("А последнее число какое?");
+	// alert(number[number.length - 1]);
+
+	if (uesrAnswer == number[number.length - 1]){
+		alert("Все верно!");
+	}
+	else {
+		alert("Вы ошиблись! Верное значение = " + number[number.length - 1]);
+	}
+	
+	var randomNumber = parseInt(Math.random() * number.length);
+	uesrAnswer = +prompt("А как насчет числа под номером " + (randomNumber + 1) + "?");
+
+	if (uesrAnswer == number[randomNumber]){
+		alert("Все верно!");
+	}
+	else {
+		alert("Не верно! Правильный ответ: " + number[randomNumber])
+	}
+
+
+
+</script>
