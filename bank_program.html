@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var incomeCash = +prompt("Введите сумму вклада");
+
+	var incomePercent = +prompt("Введите желаемый процент вклада");
+
+	var max_period = 5;
+
+	alert("Сумма вклада = " + incomeCash + ".");
+	alert("Процент вклада = " + incomePercent + "%");
+
+	var floatPercent = incomePercent / 100
+	var addSum = 1;
+	var newSum = incomeCash;
+
+	for (var i = 1; i <= 5; i++){	
+		//addSum = newSum * floatPercent;
+		//newSum = newSum + addSum;
+		newSum += newSum * floatPercent
+		document.write("После " + i + " года у вас будет сумма = " + newSum.toFixed(2) + "<br />");
+	}
+
+</script>
