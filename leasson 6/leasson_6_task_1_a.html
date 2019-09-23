@@ -1,0 +1,87 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	/*function generatorArrays (length){
+		var singleArray = [];
+
+		for (var i = 1; i <= length; i++){
+			singleArray.push(i);
+		}
+		return singleArray;
+	}*/
+
+	function generatorArrays (length){
+		var singleArray = [];
+
+		for (var i = 1; i <= length; i++){
+			var randomNumber = Math.round(Math.random() * 100);
+			singleArray.push(randomNumber);
+		}
+		return singleArray;
+	}
+
+	function sumArray(simpleArray){
+		var answer = 0;
+
+		for (var i = 0; i < simpleArray.length; i++){
+			answer = answer + simpleArray[i];
+		}
+		return answer;
+	}
+
+	function searchMaxValue(simpleArray){
+		// return maxValue = Math.max.apply(Math, simpleArray);
+		// return maxValue = Math.max(...simpleArray);
+		var maxValue = simpleArray[0];
+
+		for (var i = 1; i<=simpleArray.length; i++){
+			if (maxValue <= simpleArray[i]){
+				maxValue = simpleArray[i];
+			}
+		}
+		return maxValue;
+	}
+
+	function searchMinValue(simpleArray){
+		// return maxValue = Math.max.apply(Math, simpleArray);
+		// return maxValue = Math.max(...simpleArray);
+		var minValue = simpleArray[0];
+
+		for (var i = 1; i<=simpleArray.length; i++){
+			if (minValue >= simpleArray[i]){
+				minValue = simpleArray[i];
+			}
+		}
+		return minValue;
+	}
+
+	function evenNumberInArray(array) {
+		var evenArray = array;
+
+		for (var i = 0; i<=evenArray.length; i++){
+			if (evenArray[i] % 2 != 0) {
+				evenArray.splice(i, 1);
+			}
+		}
+
+		return evenArray;
+	}
+
+	var rangeArray = +prompt("Введите длину массива.");
+	rangeArray = parseInt(rangeArray);
+	var arrayMain;
+
+	var arrayMain = generatorArrays(rangeArray);
+	document.write("Мой массив = " + arrayMain + ".</br>");
+	var sumValue = sumArray(arrayMain);
+	var maxValue = searchMaxValue(arrayMain);
+	var minValue = searchMinValue(arrayMain);
+	var evenArray = evenNumberInArray(arrayMain);
+	document.write("Сумма значений в масиве = " + sumValue + ".</br>");
+	document.write("Максимальное значение в массиве = " + maxValue + ".</br>");
+	document.write("Минимальное значение в массиве = " + minValue + ".</br>");
+	document.write("Чётные числа в массиве = " + evenArray + ".</br>");
+
+
+
+</script>

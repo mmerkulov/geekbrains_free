@@ -1,26 +1,40 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 	
-	var userAnswer = prompt("Что можно увидеть закрытыми глазами?");
 	var score = 0;
 
-	userAnswer = userAnswer.toLowerCase();
+	var arrayRiddle = [["Что можно увидеть закрытыми глазами?", "сноведения", "сон", "сны", "мечты"],
+						["Какой болезнью не страдают на суше?", "морской", "необычной", "Морская"],
+						["Два конца, два кольца, посередине гвоздик", "ножницы", "маникюр", "ножницы"]];
 
-	if (userAnswer == 'сон' || userAnswer == 'сны' || userAnswer == 'сноведения') {
-		alert("Это правильный ответ!");
-		score++;
+	function mainWork(riddleText){	
+
+		var currentRiddleArray = riddleText;
+		var checkResult = true;
+		var result = 0;
+
+		while(checkResult){
+			userAnswer = prompt(currentRiddleArray[0]);
+			userAnswer = userAnswer.toLowerCase();
+
+			if (currentRiddleArray.includes(userAnswer)){
+				alert ("Верно, вы заработали один балл!");
+				checkResult = false;
+				result = 1;
+			}
+			else {
+				alert("Неверно!");
+				result = 0;
+			}
+		}
+
+		return result;
 	}
-	else
-		alert("Вы не угадали.");
 
-	userAnswer = prompt("Какой болезнью не страдают на суше?");	
-	userAnswer = userAnswer.toLowerCase();
+	score = score + mainWork(arrayRiddle[0]);
+	score = score + mainWork(arrayRiddle[1]);
+	score = score + mainWork(arrayRiddle[2]);
 
-	if (userAnswer == 'морской' || userAnswer) {
-		alert("Это правильный ответ!");
-		score++;
-	}
-	else
-		alert("Вы не угадали.");
+	document.write("У вас баллов = " + score);
 
 </script>

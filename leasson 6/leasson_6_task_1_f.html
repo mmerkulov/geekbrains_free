@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function createArray (length){
+		var array = [];
+		var randomNumber = 0;
+
+		for (var i = 1; i <= length; i++){
+			randomNumber = Math.round(Math.random()*100);
+
+			array.push(randomNumber);
+		}
+
+		return array;
+	}
+
+	function evenNumberInArray(array) {
+		var evenArray = array;
+
+		for (var i = 0; i<=evenArray.length; i++){
+			if (evenArray[i] % 2 != 0) {
+				evenArray.splice(i, 1);
+			}
+		}
+
+		return evenArray;
+	}
+
+	var lengthArray = +prompt("Введите длину массива");
+	lengthArray = parseInt(lengthArray);
+	var array = [];
+
+	array = createArray(lengthArray);
+	document.write(array + "</br>");
+	array = evenNumberInArray(array);
+
+	document.write(array);
+
+
+
+</script>

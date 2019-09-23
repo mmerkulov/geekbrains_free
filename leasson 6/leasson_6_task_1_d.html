@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function searchMinValue(simpleArray){
+		// return maxValue = Math.max.apply(Math, simpleArray);
+		// return maxValue = Math.max(...simpleArray);
+		var minValue = simpleArray[0];
+
+		for (var i = 1; i<=simpleArray.length; i++){
+			if (minValue >= simpleArray[i]){
+				minValue = simpleArray[i];
+			}
+		}
+		return minValue;
+	}
+
+	function generatorArrays (length){
+		var singleArray = [];
+
+		for (var i = 1; i <= length; i++){
+			var randomNumber = Math.round(Math.random() * 100);
+			singleArray.push(randomNumber);
+		}
+
+		return singleArray;
+	}
+
+	var rangeArray = +prompt("Введите длину массива.");
+	rangeArray = parseInt(rangeArray);
+
+	filledArray = generatorArrays(rangeArray);
+	minValue = searchMinValue(filledArray);
+	document.write("Ваш массив: " + filledArray + "</br>");
+	document.write("Наимбольшее числов в массиве = " + minValue);
+	//alert(maxValue);
+
+</script>

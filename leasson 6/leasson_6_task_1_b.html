@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function sumArray(singleArray){
+
+		var answer = 0;
+
+		for (var i = 1; i <= singleArray.length; i++){
+			answer = answer + singleArray[i - 1];
+		}
+
+		return answer;
+	}
+
+	function generatorArrays (length){
+		var singleArray = [];
+
+		for (var i = 1; i <= length; i++){
+			// var q = (Math.random()*100).toFixed(2);
+			var randomNumber = Math.round(Math.random() * 100);
+			singleArray.push(randomNumber);
+		}
+
+		return singleArray;
+	}
+
+	var rangeArray = +prompt("Введите длину массива.");
+	rangeArray = parseInt(rangeArray);
+
+	filledArray = generatorArrays(rangeArray);
+	mainAnswer = sumArray(filledArray);
+
+	alert(mainAnswer);
+</script>
