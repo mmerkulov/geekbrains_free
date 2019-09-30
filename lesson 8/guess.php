@@ -8,7 +8,7 @@
 		
 		var tryCount = 0;
 		var answer = parseInt(Math.random() * 100);
-		var maxTryCount = 3;
+		var maxTryCount = 5;
 
 		function readInt(){
 			var number = document.getElementById("userAnswer").value;
@@ -66,8 +66,7 @@
 					<form method="GET">
 						<p id="info">Угадайте число от 0 до 100</p>
 						<input type="text" id="userAnswer">
-						<br>
-						<input type="submit" value="Погнали!" name="">
+						<br>						
 						<a href="#" onclick="guess();" id="Button">Погнали!</a>
 					</form>
 				</div>

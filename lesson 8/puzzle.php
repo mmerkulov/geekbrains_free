@@ -4,32 +4,6 @@
 	<meta charset="utf-8">
 	<title>Личный сайт студента GeekBrains</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript">
-		
-		var score = 0;
-
-		function checkAnswer(inputId, answers){
-			var userAnswer = document.getElementById(inputId).value;
-			userAnswer = userAnswer.toLowerCase();
-
-			for(var i = 0; i < answers.length; i++){
-				if (userAnswer == answers[i]){
-					score++;
-					break;
-				}
-			}
-		}
-
-		function checkAnswers(){
-			
-			checkAnswer("userAnswer1", ["сон", "сноведения"]);
-			checkAnswer("userAnswer2", ["морской", "укус акулы"]);
-			checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
-
-			alert("Ваш результат = " + score);
-		}
-
-	</script> 
 </head>
 <body>
 
