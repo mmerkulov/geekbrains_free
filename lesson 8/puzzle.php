@@ -7,12 +7,11 @@
 </head>
 <body>
 
-<?php
-	include "menu.php";
-?>
-
-
 	<div class="content">
+		<?php
+			include "menu.php";
+		?>
+
 		<div class="center">
 		
 			<h1>Игра в загадки</h1>
@@ -58,7 +57,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 
 <div class="footer">
 	Copyright &copy; MVDRF 

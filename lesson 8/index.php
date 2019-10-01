@@ -12,7 +12,7 @@
 	include "menu.php";
 ?>
 
-	<h1>Личный сайт Михаила Папкина от сайта GeekBrains</h1>
+	<h1>Личный сайт Михаила Папкина от сайта geekbrainss</h1>
 
 	<div class="center">
 		<img src="img/photo1.jpg">
