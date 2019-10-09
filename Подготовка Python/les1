@@ -1,0 +1,65 @@
+# code utf-8
+
+import os
+import sys
+import psutil
+import platform
+import multiprocessing
+import shutil
+
+# Комментарий
+
+print('My really cool program!')
+print("Hello, programmer")
+name = input("Enter your name: ")
+
+print(name, ", welcom to the Python world!")
+
+# PEP-8 some standar doc
+
+answer = ''
+
+while answer != 'Q' or answer != 'q':
+	answer = input("Will work? (Y/N/Q)")
+
+	if answer == 'Y':
+
+		print('Cool, man!')
+		
+		print('[1] - показать список файлов в текущей директории')
+		print('[2] - показать информацию о системе')
+		print('[3] - показать список текущих процессов в системе')
+		print('[4] - дублирование файлов в текущей директории')
+		print('[5] - удалить файлы .dupl в указанной директории')
+
+		second_answer = int(input('What do you want to do?'))
+
+		if second_answer == 1:
+			print(os.listdir())
+		elif second_answer == 2:
+			print(platform.system() + ' ' + platform.release())
+			print('Текущий пользователь = ' + os.getlogin())
+			print('Количество ядер = ' + str(psutil.cpu_count()))
+			print('Количество ядер = ' + str(os.cpu_count()))
+			print('Текущая дериктория ' + os.getcwd())
+			print('Кодировка файловой системы = ' + sys.getfilesystemencoding())
+		elif second_answer == 3:
+			print(psutil.pids())
+		elif second_answer == 4:
+			file_list = os.listdir()
+			i = 0
+			while i < len(file_list):
+				newfile = file_list[i] + '.dupl'
+				shutil.copy(file_list[i], newfile) #copy
+				i +=1
+		elif second_answer == 5:
+			target_dir = input('Укажите директорию: ')
+
+			
+		else:
+			pass
+	elif answer == 'N':
+		print('Good bay, sir!') 
+	else:
+		print('Not know your answer')
+		break
